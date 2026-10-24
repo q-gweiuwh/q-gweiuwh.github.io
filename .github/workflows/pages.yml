@@ -2,7 +2,7 @@ name: Build and deploy Jekyll site
 
 on:
   push:
-    branches: ["main"]
+    branches: ["dev-me"]
   workflow_dispatch:
 
 permissions:
@@ -28,7 +28,7 @@ jobs:
           source: ./
           destination: ./_site
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: ./_site
 
